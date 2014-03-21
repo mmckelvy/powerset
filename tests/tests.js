@@ -34,10 +34,14 @@ var testModule = (function () {
 	***************************/
 	
 	// compareArrays tests.
-	// All arrays to the next comment are the same (e.g. caTestArray1 === caActualArray1).
+
+	// Should return 'true' when all elements in both arrays are the same.
 	var caTestArray1 = [1, 2, 3, 4];
 	var caActualArray1 = [1, 2, 3, 4];
 	
+	console.log( compareArrays(caTestArray1, caActualArray1) );  // Should return 'true'.
+	
+	// Should return 'true' when elements in nested arrays are the same.
 	var caTestArray2 = [
 		[0, 1],
 		[1, 3],
@@ -53,43 +57,56 @@ var testModule = (function () {
 		[3, 4]
 	];
 	
+	console.log( compareArrays(caTestArray2, caActualArray2) );  // Should return 'true'.
+
+	// Should return 'true' when all elements are the same regardless of data type.
 	var caTestArray3 = [ 'apple', 'orange', 1, 3, [2, 3] ];
 	var caActualArray3 = [ 'apple', 'orange', 1, 3, [2, 3] ];
-	// End first set of test / actual arrays.
 
-	// All arrays to the next comment are different (e.g. caTestArray1 !== caActualArray1).
+	console.log( compareArrays(caTestArray3, caActualArray3) );  // Should return 'true'.
+
+	// Should return 'false' when array elements are different.
 	var caTestArray4 = [1, 7, 8, 4];
 	var caActualArray4 = [1, 2, 3, 4];
+
+	console.log( compareArrays(caTestArray4, caActualArray4) );  // Should return 'false'.
 	
+	// Should return 'false' when elements in nested arrays are different.
 	var caTestArray5 = [
 		[0, 1],
 		[1, 3, 3],
 		[1, 3, 9, 5],
-		[2, 3]
+		[2, 3],
 		[0, 4]
 	];
 	var caActualArray5 = [
 		[0, 1],
 		[1, 3],
 		[1, 3],
-		[2, 3]
+		[2, 3],
 		[3, 4]
 	];
 	
+	console.log( compareArrays(caTestArray5, caActualArray5) );  // Should return 'false'.
+
+	// Should return 'false' when array elements are different regardless of data type. 
 	var caTestArray6 = [ 'banana', 'orange', 7, 5, [8, 3] ];
 	var caActualArray6 = [ 'apple', 'orange', 1, 3, [2, 3] ];
-	// End second set of test / actual arrays.
-
-
-	// Actual tests.
-	console.log( compareArrays(caTestArray1, caActualArray1) );  // Should return 'true'.
-	console.log( compareArrays(caTestArray2, caActualArray2) );  // Should return 'true'.
-	console.log( compareArrays(caTestArray3, caActualArray3) );  // Should return 'true'.
-	console.log( compareArrays(caTestArray4, caActualArray4) );  // Should return 'false'.
-	console.log( compareArrays(caTestArray5, caActualArray5) );  // Should return 'false'.
+	
 	console.log( compareArrays(caTestArray6, caActualArray6) );  // Should return 'false'.
 
+	// Should return false given a falsey value for the actualArray.
+	var caTestArray7 = [ 'banana', 'orange', 7, 5, [8, 3] ];
+	var caActualArray7 = null;
 
+	console.log( compareArrays(caTestArray7, caActualArray7) );  // Should return 'false'.
+
+	// Should return true even with a falsey value inside the array, as long as the arrays are equal.
+	var caTestArray8 = [1, 2, null];
+	var caActualArray8 = [1, 2, null];
+
+	console.log( compareArrays(caTestArray8, caActualArray8) );  // Should return 'true'.
+	
 	// Power set tests.
 	var array1 = [1, 2, 3];
 	// Correct power set for the above array.

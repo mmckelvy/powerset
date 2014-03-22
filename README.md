@@ -8,7 +8,7 @@ Open 'runner.html' and view the console. JS source file is tests/tests.js.  I've
 
 # A brief word on the power set
 The power set is the mathematical term for all the subsets of a given set. For example, the power set of [1, 2, 3] would be:
-+ [],
++ [ ],
 + [3],
 + [2],
 + [2, 3],

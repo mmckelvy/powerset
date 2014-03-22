@@ -42,7 +42,7 @@ var testModule = (function () {
 	// Provide pass / fail confirmation messages.
 	var expects = function (expected, actual) {
 		passMsg = 'Test passed. Expected ' + expected + ' and received the correct value.';
-		failMsg = 'Test failed. Expected ' + expected + ' and received ' + actual + '.';
+		failMsg = '***TEST FAILED***. Expected ' + expected + ' and received ' + actual + '.';
 		if (expected === actual) {
 			return passMsg;
 		}
@@ -215,14 +215,14 @@ var testModule = (function () {
 
 	// Should return the correct sum of all the subsets of a given set.
 	var spTestVal1 = 24; // Using baseArray1.
-	var spActualVal1 = powerSetModule.sumPowerSet(baseArray1);
+	var spActualVal1 = powerSetModule.sumPowerSet(baseArray1).summedSet;
 	var testResult13 = expects(spTestVal1, spActualVal1);
 	console.log(testResult13);
 
 	// Should return the correct sum of all the subsets of a given set, with different numbers.
 	var baseArray4 = [2, 3, 4, 5];
 	var spTestVal2 = 112; // Using baseArray4.
-	var spActualVal2 = powerSetModule.sumPowerSet(baseArray4);
+	var spActualVal2 = powerSetModule.sumPowerSet(baseArray4).summedSet;
 	var testResult14 = expects(spTestVal2, spActualVal2);
 	console.log(testResult14);	
 

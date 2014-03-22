@@ -166,6 +166,31 @@ var testModule = (function () {
 	var testResult9 = expects( true, compareArrays(lpTestArray1, lpActualArray1) );
 	console.log(testResult9);
 
+	// Should contain 2^array.length elements.
+	var baseArray2 = [1, 3, 4, 8, 9, 3, 7];
+	lpTestLength = 128;
+	lpActualLength = powerSetModule.listPowerSet(baseArray2).length;
+
+	var testResult10 = expects(lpTestLength, lpActualLength);
+	console.log(testResult10);
+
+	// Should list all the correct subsets for all data types.
+
+	var baseArray3 = [1, 'apple', 'orange'];
+	var lpTestArray2 = [
+		[],
+		['orange'],
+		['apple'],
+		['apple', 'orange'],
+		[1],
+		[1, 'orange'],
+		[1, 'apple'],
+		[1, 'apple', 'orange']
+	];
+
+	lpActualArray2 = powerSetModule.listPowerSet(baseArray3);
+	var testResult11 = expects( true, compareArrays(lpTestArray2, lpActualArray2) );
+	console.log(testResult11);
 
 })();
 

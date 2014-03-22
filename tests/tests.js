@@ -5,11 +5,12 @@ var testModule = (function () {
 	********************/
 	
 	/*
-	@function: compareArrays.
-	@description: Compare two arrays, check for equality.
-	@params: 
-	(1) testArray is the baseline, verified correct array value.
-	(2) actualArray is the result of a function call that you want to check.
+	function: compareArrays.
+	description: Compare two arrays, check for equality.  Works for any array with the exception of arrays of objects.
+	param: testArray is the baseline / correct array value.
+	param: actualArray is any array that you want to check.
+	returns: a boolean value.
+	example: compareArrays([1, 2, 3], [1, 2, 3]) --> 'true'
 	*/
 
 	var compareArrays = function (testArray, actualArray) {
@@ -54,7 +55,7 @@ var testModule = (function () {
 	/**************************
 	Tests
 
-	@functions tested:
+	functions tested:
 	(1) compareArrays (this module)
 	(2) listPowerSet (powerSet module)
 	(3) sumPowerSet (powerSet module)

@@ -19,5 +19,5 @@ The power set is the mathematical term for all the subsets of a given set. For e
 
 In a programming context, the power set translates into all the sub arrays of a given array.
 
-# API 
+# API
 

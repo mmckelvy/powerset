@@ -145,7 +145,7 @@ var testModule = (function () {
 	console.log(testResult8);
 	
 	// ---- listPowerSet tests ----
-	console.log('--- listPowerSet tests ---')
+	console.log('--- listPowerSet tests ---');
 	
 	// Should list all the correct subsets of a given array.
 	var baseArray1 = [1, 2, 3];
@@ -191,6 +191,54 @@ var testModule = (function () {
 	lpActualArray2 = powerSetModule.listPowerSet(baseArray3);
 	var testResult11 = expects( true, compareArrays(lpTestArray2, lpActualArray2) );
 	console.log(testResult11);
+
+	// Should work on nested arrays.
+	var baseArray3 = [1, [2, 3], 4];
+	var lpTestArray3 = [
+		[],
+		[4],
+		[ [2, 3] ],
+		[ [2, 3], 4],
+		[1],
+		[1, 4],
+		[1, [2, 3] ],
+		[1, [2, 3], 4]
+	];
+
+	lpActualArray3 = powerSetModule.listPowerSet(baseArray3);
+	var testResult12 = expects( true, compareArrays(lpTestArray3, lpActualArray3) );
+	console.log(testResult12);
+
+	// ---- sumPowerSet tests ----
+	console.log('--- sumPowerSet tests ---');
+
+	// Should return the correct sum of all the subsets of a given set.
+	var spTestVal1 = 24; // Using baseArray1.
+	var spActualVal1 = powerSetModule.sumPowerSet(baseArray1);
+	var testResult13 = expects(spTestVal1, spActualVal1);
+	console.log(testResult13);
+
+	// Should return the correct sum of all the subsets of a given set, with different numbers.
+	var baseArray4 = [2, 3, 4, 5];
+	var spTestVal2 = 112; // Using baseArray4.
+	var spActualVal2 = powerSetModule.sumPowerSet(baseArray4);
+	var testResult14 = expects(spTestVal2, spActualVal2);
+	console.log(testResult14);	
+
+	// --- checkLargest tests ---
+	console.log('--- checkLargest tests ---');	
+	
+	// Should return 'true' when the other elements in the set add up to the largest number.
+	var baseArray5 = [20, 5, 5, 5, 5]; // 5 + 5 + 5 + 5 === 20.
+	var clActualVal1 = powerSetModule.checkLargest(baseArray5);
+	var testResult15 = expects(true, clActualVal1);
+	console.log(testResult15);
+
+	// Should return 'false' when the other elements in the set do not add up to the largest number.
+	var baseArray6 = [29, 6, 4, 1, 12]; // No combination of 6, 4, 1, 12 === 29.
+	var clActualVal2 = powerSetModule.checkLargest(baseArray6);
+	var testResult16 = expects(false, clActualVal2);
+	console.log(testResult16);
 
 })();
 

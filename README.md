@@ -23,13 +23,13 @@ This module includes three core functions, two helper functions, and a series of
 
 #### Core functions
 
-1. **listPowerSet**: lists all the sub arrays of a given array.
-1. **sumPowerSet**: calculates the sum of the power set of a given array.
-1. **checkLargest**: checks to see if the sum of any combination of values in an array is equivalent to the array's largest value.
+1. `listPowerSet`: lists all the sub arrays of a given array.
+1. `sumPowerSet`: calculates the sum of the power set of a given array.
+1. `checkLargest`: checks to see if the sum of any combination of values in an array is equivalent to the array's largest value.
 
 #### Helper functions
-1. **repeatString**: repeats a string a given number of times.
-1. **compareArrays**: checks for equality of two arrays.
+1. `repeatString`: repeats a string a given number of times.
+1. `compareArrays`: checks for equality of two arrays.
 
 For more detailed descriptions including syntax, parameters, and methodologies, see the API below.
 

@@ -45,10 +45,11 @@ The powerset module exposes the three core functions listed above through the `p
 + param: arr is any array (e.g. [1, 23, 4] ).  Any data type is permitted.  Nested arrays are permitted, but note that the nested arrays will be treated as a single element.    
 + returns: an array of arrays.
 + example:
+	
 	powerSetModule.listPowerSet([1, 2, 3])
 	// returns:
 		
-	[],
+	[ ],
 	[3],
 	[2],
 	[2, 3],

@@ -46,15 +46,15 @@ The powerset module exposes the three core functions listed above through the `p
 + returns: an array of arrays.
 + example:
 	
-	powerSetModule.listPowerSet([1, 2, 3])
-	// returns:
-		
-	[ ],
-	[3],
-	[2],
-	[2, 3],
-	[1],
-	[1, 3],
-	[1, 2],
-	[1, 2, 3]
-
+```
+powerSetModule.listPowerSet([1, 2, 3])
+// returns:
+[ ],
+[3],
+[2],
+[2, 3],
+[1],
+[1, 3],
+[1, 2],
+[1, 2, 3]
+```

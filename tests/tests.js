@@ -176,7 +176,6 @@ var testModule = (function () {
 	console.log(testResult10);
 
 	// Should list all the correct subsets for all data types.
-
 	var baseArray3 = [1, 'apple', 'orange'];
 	var lpTestArray2 = [
 		[],
@@ -219,7 +218,7 @@ var testModule = (function () {
 	var testResult13 = expects(spTestVal1, spActualVal1);
 	console.log(testResult13);
 
-	// Should return the correct sum of all the subsets of a given set, with different numbers.
+	// Should return the correct sum of all the subsets of a given set with different numbers.
 	var baseArray4 = [2, 3, 4, 5];
 	var spTestVal2 = 112; // Using baseArray4.
 	var spActualVal2 = powerSetModule.sumPowerSet(baseArray4).summedSet;
@@ -242,6 +241,3 @@ var testModule = (function () {
 	console.log(testResult16);
 
 })();
-
-
-

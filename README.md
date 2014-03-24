@@ -63,9 +63,9 @@ powerSetModule.listPowerSet( [1, 2, 3] );
 ```
 #### powerSetModule.sumPowerSet(arr)
 
-description: calculates the power set and then sums the results.
-param: arr is any single level, numerical array (e.g. [1, 3, 4, 8] ).  Will not work on nested arrays or non-numerical values.
-returns: a single number.
++ description: calculates the power set and then sums the results.
++ param: arr is any single level, numerical array (e.g. [1, 3, 4, 8] ).  Will not work on nested arrays or non-numerical values.
++ returns: a single number.
 
 ###### Example: 
 
@@ -80,9 +80,9 @@ powerSetModule.sumPowerSet( [2, 3, 4, 5] );
 
 #### powerSetModule.checkLargest(arr)
 
-description: Checks to see if the sum of any combination of values in an array is equivalent to the array's largest value.
-param: arr is any single level, numerical array (e.g. [1, 3, 4, 8] ).  Will not work on nested arrays or non-numerical values.
-returns: a boolean value.
++ description: Checks to see if the sum of any combination of values in an array is equivalent to the array's largest value.
++ param: arr is any single level, numerical array (e.g. [1, 3, 4, 8] ).  Will not work on nested arrays or non-numerical values.
++ returns: a boolean value.
 
 ###### Example:
 

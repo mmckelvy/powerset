@@ -21,7 +21,7 @@ The total number of subsets of any given set is equal to *2^n*, where *n* is the
 
 "Sets" are modeled as arrays in this module.  Thus the power set of a given set will be an array of arrays (e.g. `[ [0, 1], [1, 2] ]`).    
 
-This module includes three core functions, two helper functions, and a series of tests.  The included functions are as follows:
+This module includes three core functions, three helper functions, and a series of tests.  The included functions are as follows:
 
 #### Core functions
 
@@ -32,6 +32,7 @@ This module includes three core functions, two helper functions, and a series of
 #### Helper functions
 1. `repeatString` repeats a string a given number of times.
 1. `compareArrays` checks for equality of two arrays.
+1. `expects` provides pass / fail confirmation messages for the tests.
 
 For more detailed descriptions including syntax, parameters, and methodologies, see the API below.
 
@@ -42,7 +43,7 @@ The powerset module exposes the three core functions listed above through the `p
 #### powerSetModule.listPowerSet(arr)
 
 + description: lists all the subarrays of a given array.  Accomplishes this by mapping each subset to a particular binary number.  No recursion is involved.
-+ param: arr is any array (e.g. [1, 23, 4] ).  Any data type is permitted.  Nested arrays are permitted, but note that the nested arrays will be treated as a single element.    
++ param: arr is any array (e.g. `[1, 23, 4]` ).  Any data type is permitted.  Nested arrays are permitted, but the nested arrays will be treated as a single element.    
 + returns: an array of arrays.
 
 ###### Example:
@@ -64,7 +65,7 @@ powerSetModule.listPowerSet( [1, 2, 3] );
 #### powerSetModule.sumPowerSet(arr)
 
 + description: calculates the power set and then sums the results.
-+ param: arr is any single level, numerical array (e.g. [1, 3, 4, 8] ).  Will not work on nested arrays or non-numerical values.
++ param: arr is any single level, numerical array (e.g. `[1, 3, 4, 8]` ).  Will not work on nested arrays or non-numerical values.
 + returns: a single number.
 
 ###### Example: 
@@ -81,7 +82,7 @@ powerSetModule.sumPowerSet( [2, 3, 4, 5] );
 #### powerSetModule.checkLargest(arr)
 
 + description: Checks to see if the sum of any combination of values in an array is equivalent to the array's largest value.
-+ param: arr is any single level, numerical array (e.g. [1, 3, 4, 8] ).  Will not work on nested arrays or non-numerical values.
++ param: arr is any single level, numerical array (e.g. `[1, 3, 4, 8]` ).  Will not work on nested arrays or non-numerical values.
 + returns: a boolean value.
 
 ###### Example:

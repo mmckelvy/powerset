@@ -44,17 +44,56 @@ The powerset module exposes the three core functions listed above through the `p
 + description: lists all the subarrays of a given array.  Accomplishes this by mapping each subset to a particular binary number.  No recursion is involved.
 + param: arr is any array (e.g. [1, 23, 4] ).  Any data type is permitted.  Nested arrays are permitted, but note that the nested arrays will be treated as a single element.    
 + returns: an array of arrays.
-+ example:
+
+###### Example:
 	
 ```
-powerSetModule.listPowerSet([1, 2, 3])
-// returns:
-[ ],
-[3],
-[2],
-[2, 3],
-[1],
-[1, 3],
-[1, 2],
-[1, 2, 3]
+powerSetModule.listPowerSet( [1, 2, 3] );
+//
+[
+	[ ],
+	[3],
+	[2],
+	[2, 3],
+	[1],
+	[1, 3],
+	[1, 2],
+	[1, 2, 3]
+]
 ```
+#### powerSetModule.sumPowerSet(arr)
+
+description: calculates the power set and then sums the results.
+param: arr is any single level, numerical array (e.g. [1, 3, 4, 8] ).  Will not work on nested arrays or non-numerical values.
+returns: a single number.
+
+###### Example: 
+
+```
+powerSetModule.sumPowerSet( [1, 2, 3] );
+// 24 
+
+powerSetModule.sumPowerSet( [2, 3, 4, 5] );
+// 112
+
+```
+
+#### powerSetModule.checkLargest(arr)
+
+description: Checks to see if the sum of any combination of values in an array is equivalent to the array's largest value.
+param: arr is any single level, numerical array (e.g. [1, 3, 4, 8] ).  Will not work on nested arrays or non-numerical values.
+returns: a boolean value.
+
+###### Example:
+
+```
+powerSetModule.checkLargest( [20, 5, 5, 5, 5] );
+// true
+
+powerSetModule.checkLargest( [29, 6, 4, 1, 12] );
+// false
+
+```
+
+
+

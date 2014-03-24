@@ -1,4 +1,4 @@
-A module for working with the power set (all subsets of a given set).
+A simple module for working with the power set (all subsets of a given set).
 
 # Installation
 Clone the repo and include via script tags if used on the client side and "require" if used on the server. I haven't uploaded to npm or bower yet.
@@ -17,9 +17,9 @@ The power set is the mathematical term for all the subsets of a given set. For e
 + [1, 2],
 + [1, 2, 3]
 
-The total number of subsets of any given set is equal to *2^n*, where *n* is the number of elements in the original set.  Thus a set with 3 elements will have 8 total subsets (2^3 = 8), including the empty set ('[ ]').  The fact that the number of subsets can be expressed as a power of 2 is particularly convenient, as it means we can map each subset to a binary number.  This is the approach I have taken in this module.      
+The total number of subsets of any given set is equal to *2^n*, where *n* is the number of elements in the original set.  Thus a set with 3 elements will have 8 total subsets (2^3 = 8), including the empty set ("[ ]").  The fact that the number of subsets can be expressed as a power of 2 is particularly convenient, as it means we can map each subset to a binary number.  This is the approach I have taken.      
 
-I've modeled the "sets" as arrays in this module.  Thus the power set of a given set will be an array of arrays (e.g. `[ [0, 1], [1, 2] ]`).    
+"Sets" are modeled as arrays in this module.  Thus the power set of a given set will be an array of arrays (e.g. `[ [0, 1], [1, 2] ]`).    
 
 This module includes three core functions, two helper functions, and a series of tests.  The included functions are as follows:
 
